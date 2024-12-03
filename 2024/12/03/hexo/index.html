@@ -29,10 +29,12 @@
 <meta property="og:site_name" content="枫叶の故事">
 <meta property="og:description" content="添加夜间模式按钮步骤一 安装夜间模式插件 : 1npm install hexo-next-darkmode --save 步骤二 往 NexT 主题的 _config.yml 配置文件里添加以下内容 : 1234567891011121314151617# Darkmode JS# For more information: https:&#x2F;&#x2F;github.com&#x2F;rqh656418510&#x2F;hex">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/images/pic1.png">
 <meta property="article:published_time" content="2024-12-03T09:35:25.000Z">
-<meta property="article:modified_time" content="2024-12-03T09:47:48.593Z">
+<meta property="article:modified_time" content="2024-12-03T10:03:15.916Z">
 <meta property="article:author" content="枫叶の归宿">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/pic1.png">
 
 
 <link rel="canonical" href="http://example.com/2024/12/03/hexo/">
@@ -113,7 +115,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E5%A4%9C%E9%97%B4%E6%A8%A1%E5%BC%8F%E6%8C%89%E9%92%AE"><span class="nav-text">添加夜间模式按钮</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89css%E6%A0%B7%E5%BC%8F"><span class="nav-text">自定义css样式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%96%E6%B6%88%E5%A4%9C%E9%97%B4%E6%A8%A1%E5%BC%8F"><span class="nav-text">取消夜间模式</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E5%A4%9C%E9%97%B4%E6%A8%A1%E5%BC%8F%E6%8C%89%E9%92%AE"><span class="nav-text">添加夜间模式按钮</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89css%E6%A0%B7%E5%BC%8F"><span class="nav-text">自定义css样式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%96%E6%B6%88%E5%A4%9C%E9%97%B4%E6%A8%A1%E5%BC%8F"><span class="nav-text">取消夜间模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="nav-text">常见问题</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -205,7 +207,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2024-12-03 17:35:25 / Modified: 17:47:48" itemprop="dateCreated datePublished" datetime="2024-12-03T17:35:25+08:00">2024-12-03</time>
+      <time title="Created: 2024-12-03 17:35:25 / Modified: 18:03:15" itemprop="dateCreated datePublished" datetime="2024-12-03T17:35:25+08:00">2024-12-03</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -251,6 +253,34 @@
 <li>也可以使用这种 mix-blend-mode: difference CSS 样式来还原暗黑&#x2F;夜间模式。</li>
 </ul>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.button &#123;</span><br><span class="line">  mix-blend-mode: difference;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h4><p><img src="/images/pic1.png" alt="sudo字眼没有高光"><br><em>原因</em></p>
+<ol>
+<li>在 Markdown 文件中，如果代码块未指定语言类型，语法高亮引擎可能无法正确解析 sudo。</li>
+<li>主题颜色</li>
+</ol>
+<p><em>解决方案</em></p>
+<ul>
+<li>使用语法高亮主题</li>
+</ul>
+<ol>
+<li>打开 NexT 的配置文件：</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">themes/next/_config.yml</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>找到以下设置并修改高亮主题为支持亮色的夜间样式，例如 dracula 或其他亮色主题：</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">highlight:</span><br><span class="line">  enable: true</span><br><span class="line">  theme: monokai</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>确保在代码块的开头指定正确的语言类型，例如 bash 或 shell：</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install mariadb-server mariadb-client -y</span><br><span class="line"></span><br><span class="line">or</span><br><span class="line"></span><br><span class="line">sudo apt install mariadb-server mariadb-client -y</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>保存后运行以下命令以重新生成：</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
 
     </div>
 

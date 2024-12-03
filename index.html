@@ -199,7 +199,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2024-12-03 17:35:25 / Modified: 17:47:48" itemprop="dateCreated datePublished" datetime="2024-12-03T17:35:25+08:00">2024-12-03</time>
+      <time title="Created: 2024-12-03 17:35:25 / Modified: 18:03:15" itemprop="dateCreated datePublished" datetime="2024-12-03T17:35:25+08:00">2024-12-03</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -246,6 +246,34 @@
 <li>也可以使用这种 mix-blend-mode: difference CSS 样式来还原暗黑&#x2F;夜间模式。</li>
 </ul>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.button &#123;</span><br><span class="line">  mix-blend-mode: difference;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h4><p><img src="/images/pic1.png" alt="sudo字眼没有高光"><br><em>原因</em></p>
+<ol>
+<li>在 Markdown 文件中，如果代码块未指定语言类型，语法高亮引擎可能无法正确解析 sudo。</li>
+<li>主题颜色</li>
+</ol>
+<p><em>解决方案</em></p>
+<ul>
+<li>使用语法高亮主题</li>
+</ul>
+<ol>
+<li>打开 NexT 的配置文件：</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">themes/next/_config.yml</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>找到以下设置并修改高亮主题为支持亮色的夜间样式，例如 dracula 或其他亮色主题：</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">highlight:</span><br><span class="line">  enable: true</span><br><span class="line">  theme: monokai</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>确保在代码块的开头指定正确的语言类型，例如 bash 或 shell：</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install mariadb-server mariadb-client -y</span><br><span class="line"></span><br><span class="line">or</span><br><span class="line"></span><br><span class="line">sudo apt install mariadb-server mariadb-client -y</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>保存后运行以下命令以重新生成：</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
 
       
     </div>
