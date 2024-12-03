@@ -1392,7 +1392,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #e8b63b;
+    background: #ff0f08;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -1845,6 +1845,16 @@ pre code {
 }
 .back-to-top.back-to-top-on {
   bottom: 30px;
+}
+.reading-progress-bar {
+  --progress: 0;
+  background: #37c6c0;
+  height: 3px;
+  position: fixed;
+  z-index: 50;
+  width: var(--progress);
+  left: 0;
+  top: 0;
 }
 .rtl.post-body p,
 .rtl.post-body a,
@@ -2893,7 +2903,7 @@ header.header {
   }
 }
 body {
-  background-image: url("/images/pic2.jpg");
+  background-image: url("/images/###.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
