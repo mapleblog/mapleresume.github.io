@@ -1392,7 +1392,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #55ff0e;
+    background: #d46978;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2891,4 +2891,31 @@ header.header {
   .sidebar {
     display: none;
   }
+}
+body {
+  background-image: url("/images/pic2.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+.main-inner {
+  background: #fff;
+  opacity: 0.9;
+}
+.header {
+  background: #fff;
+  opacity: 0.85;
+}
+.sidebar {
+  background: #fff;
+  opacity: 0.85;
+}
+.post-title .post-title-link {
+  color: #000;
+}
+.post-meta .post-meta-item {
+  color: #00eaff;
+}
+body {
+  color: #000;
 }
