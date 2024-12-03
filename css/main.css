@@ -1431,7 +1431,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #267555;
+    background: #cdc9c6;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2956,18 +2956,8 @@ body {
   opacity: 0.9;
 }
 .header {
-  background: #fff;
   opacity: 0.85;
 }
 .sidebar {
   opacity: 0.85;
-}
-.post-title .post-title-link {
-  color: #000;
-}
-.post-meta .post-meta-item {
-  color: #00eaff;
-}
-body {
-  color: #000;
 }
