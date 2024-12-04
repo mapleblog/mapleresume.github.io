@@ -1273,7 +1273,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #ffff6a;
+    background: #ff95ff;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2775,15 +2775,15 @@ body {
   0% {
     transform: translateY(0) translateX(0) rotate(0);
   }
-  70% {
-    transform: translateY(var(--translateY)) translateX(var(--translateX)) rotate(720deg);
+  100% {
+    transform: translateY(var(--translateY)) translateX(var(--translateX)) rotate(800deg);
   }
   100% {
     transform: translateY(var(--translateY)) translateX(var(--translateX)) rotate(800deg);
   }
 }
 @keyframes snowflakeFadeOut {
-  0%, 90% {
+  0%, 50% {
     opacity: var(--opacity);
   }
   100% {
