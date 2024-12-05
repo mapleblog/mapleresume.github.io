@@ -1,0 +1,77 @@
+//背景图片设置
+body{
+    background-image:url(/images/###.jpg);
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-size:100% 100%;
+}
+
+//文章背板的颜色和透明度设置
+.main-inner{
+    //background: #ffffff;
+    opacity: 0.90;
+}
+
+//菜单栏的颜色和透明度设置
+.header{
+    //background: #ffffff;
+	opacity: 0.85;
+}
+
+//侧边框的颜色和透明度设置
+.sidebar {
+    //background: #ffffff;
+	opacity: 0.85;
+}
+
+//标题颜色
+.post-title .post-title-link{
+    //color: #000000;
+}
+
+//标题下的日期颜色
+.post-meta .post-meta-item{
+    //color: #00eaff;
+}
+
+//修改字体颜色
+body{
+    //color: #000000;
+}
+
+/* 雪花 */
+.snowflake {
+    position: fixed;
+    pointer-events: none;
+    animation-name: snowflakeFallRotate, snowflakeFadeOut;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    color: white;
+    pointer-events: none;
+    z-index: -1;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.8), 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+@keyframes snowflakeFallRotate {
+    0% {
+        transform: translateY(0) translateX(0) rotate(0);
+    }
+    /* 下落到底部所用时间 */ 
+    100% {
+        transform: translateY(var(--translateY)) translateX(var(--translateX)) rotate(800deg);
+    }
+    100% {
+        transform: translateY(var(--translateY)) translateX(var(--translateX)) rotate(800deg);
+    }
+}
+
+@keyframes snowflakeFadeOut {
+    0%, 50% {
+        opacity: var(--opacity);
+    }
+    100% {
+        opacity: 0;
+    }
+}
+/* 雪花 END */
