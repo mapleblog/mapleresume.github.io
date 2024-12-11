@@ -22,28 +22,40 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.21.1","exturl":false,"sidebar":{"position":"right","width_expanded":320,"width_dual_column":240,"display":"hide","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="添加夜间模式按钮步骤一 安装夜间模式插件 : 1npm install hexo-next-darkmode --save 步骤二 往 NexT 主题的 _config.yml 配置文件里添加以下内容 : 1234567891011121314151617# Darkmode JS# For more information: https:&#x2F;&#x2F;github.com&#x2F;rqh656418510&#x2F;hex">
+    <meta name="description" content="前提条件 Waline官方文档 LeanCloud账号 Versel服务端 域名绑定 （非必须）  LeanCloud注册 登录 或 注册 LeanCloud 国际版 点击左上角 创建应用 App name（必填） 选择免费 Developer 开发板        选择刚创建的应用      点击 Settings 然后 App Keys，记录 AppID | AppKey | MasterKe">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexoの夜间模式">
-<meta property="og:url" content="http://example.com/2024/12/03/hexo%E3%81%AE%E5%A4%9C%E9%97%B4%E6%A8%A1%E5%BC%8F/index.html">
+<meta property="og:title" content="Hexoの评论系统部署">
+<meta property="og:url" content="http://example.com/2024/12/11/Hexo%E3%81%AE%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E9%83%A8%E7%BD%B2/index.html">
 <meta property="og:site_name" content="枫叶の故事">
-<meta property="og:description" content="添加夜间模式按钮步骤一 安装夜间模式插件 : 1npm install hexo-next-darkmode --save 步骤二 往 NexT 主题的 _config.yml 配置文件里添加以下内容 : 1234567891011121314151617# Darkmode JS# For more information: https:&#x2F;&#x2F;github.com&#x2F;rqh656418510&#x2F;hex">
+<meta property="og:description" content="前提条件 Waline官方文档 LeanCloud账号 Versel服务端 域名绑定 （非必须）  LeanCloud注册 登录 或 注册 LeanCloud 国际版 点击左上角 创建应用 App name（必填） 选择免费 Developer 开发板        选择刚创建的应用      点击 Settings 然后 App Keys，记录 AppID | AppKey | MasterKe">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/images/pic1.png">
-<meta property="article:published_time" content="2024-12-03T09:35:25.891Z">
-<meta property="article:modified_time" content="2024-12-11T01:28:20.332Z">
+<meta property="og:image" content="http://example.com/images/leancloud_create_app.png">
+<meta property="og:image" content="http://example.com/images/select_leancloud_app.png">
+<meta property="og:image" content="http://example.com/images/app_clientid_key.png">
+<meta property="og:image" content="http://example.com/images/vercel_connect.jpg">
+<meta property="og:image" content="http://example.com/images/github_authorize_vercel.jpg">
+<meta property="og:image" content="http://example.com/images/add_github_account.jpg">
+<meta property="og:image" content="http://example.com/images/install_vercel2github.jpg">
+<meta property="og:image" content="http://example.com/images/repos_name.jpg">
+<meta property="og:image" content="http://example.com/images/vercel_deployment.jpg">
+<meta property="og:image" content="http://example.com/images/vercel_successful.jpg">
+<meta property="og:image" content="http://example.com/images/vercel_main.jpg">
+<meta property="og:image" content="http://example.com/images/vercel_settings.jpg">
+<meta property="og:image" content="http://example.com/images/repos_name.jpg">
+<meta property="article:published_time" content="2024-12-11T08:13:14.000Z">
+<meta property="article:modified_time" content="2024-12-11T09:32:41.901Z">
 <meta property="article:author" content="枫叶の归宿">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/images/pic1.png">
+<meta name="twitter:image" content="http://example.com/images/leancloud_create_app.png">
 
 
-<link rel="canonical" href="http://example.com/2024/12/03/hexo%E3%81%AE%E5%A4%9C%E9%97%B4%E6%A8%A1%E5%BC%8F/">
+<link rel="canonical" href="http://example.com/2024/12/11/Hexo%E3%81%AE%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E9%83%A8%E7%BD%B2/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2024/12/03/hexo%E3%81%AE%E5%A4%9C%E9%97%B4%E6%A8%A1%E5%BC%8F/","path":"2024/12/03/hexoの夜间模式/","title":"Hexoの夜间模式"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2024/12/11/Hexo%E3%81%AE%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E9%83%A8%E7%BD%B2/","path":"2024/12/11/Hexoの评论系统部署/","title":"Hexoの评论系统部署"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Hexoの夜间模式 | 枫叶の故事</title>
+<title>Hexoの评论系统部署 | 枫叶の故事</title>
   
 
 
@@ -115,7 +127,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E5%A4%9C%E9%97%B4%E6%A8%A1%E5%BC%8F%E6%8C%89%E9%92%AE"><span class="nav-text">添加夜间模式按钮</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89css%E6%A0%B7%E5%BC%8F"><span class="nav-text">自定义css样式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%96%E6%B6%88%E5%A4%9C%E9%97%B4%E6%A8%A1%E5%BC%8F"><span class="nav-text">取消夜间模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="nav-text">常见问题</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6"><span class="nav-text">前提条件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#LeanCloud%E6%B3%A8%E5%86%8C"><span class="nav-text">LeanCloud注册</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Vercel%E6%9C%8D%E5%8A%A1%E7%AB%AF%E9%83%A8%E7%BD%B2"><span class="nav-text">Vercel服务端部署</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -177,7 +189,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/12/03/hexo%E3%81%AE%E5%A4%9C%E9%97%B4%E6%A8%A1%E5%BC%8F/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/12/11/Hexo%E3%81%AE%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E9%83%A8%E7%BD%B2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/maple.jpg">
@@ -190,12 +202,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Hexoの夜间模式 | 枫叶の故事">
+      <meta itemprop="name" content="Hexoの评论系统部署 | 枫叶の故事">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Hexoの夜间模式
+          Hexoの评论系统部署
         </h1>
 
         <div class="post-meta-container">
@@ -205,15 +217,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
+      
 
-      <time title="Created: 2024-12-03 17:35:25" itemprop="dateCreated datePublished" datetime="2024-12-03T17:35:25+08:00">2024-12-03</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-12-11 09:28:20" itemprop="dateModified" datetime="2024-12-11T09:28:20+08:00">2024-12-11</time>
+      <time title="Created: 2024-12-11 16:13:14 / Modified: 17:32:41" itemprop="dateCreated datePublished" datetime="2024-12-11T16:13:14+08:00">2024-12-11</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -225,7 +231,7 @@
         </span>
           , 
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Platform/Hexo%E3%81%AE%E5%A4%9C%E9%97%B4%E6%A8%A1%E5%BC%8F/" itemprop="url" rel="index"><span itemprop="name">Hexoの夜间模式</span></a>
+          <a href="/categories/Platform/Hexo%E3%81%AE%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E9%83%A8%E7%BD%B2/" itemprop="url" rel="index"><span itemprop="name">Hexoの评论系统部署</span></a>
         </span>
     </span>
 
@@ -238,8 +244,8 @@
     </span>
     <span class="post-meta-item-text">Waline: </span>
   
-    <a title="waline" href="/2024/12/03/hexo%E3%81%AE%E5%A4%9C%E9%97%B4%E6%A8%A1%E5%BC%8F/#waline" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" data-path="/2024/12/03/hexo%E3%81%AE%E5%A4%9C%E9%97%B4%E6%A8%A1%E5%BC%8F/" itemprop="commentCount"></span>
+    <a title="waline" href="/2024/12/11/Hexo%E3%81%AE%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E9%83%A8%E7%BD%B2/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/2024/12/11/Hexo%E3%81%AE%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E9%83%A8%E7%BD%B2/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -252,55 +258,63 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h4 id="添加夜间模式按钮"><a href="#添加夜间模式按钮" class="headerlink" title="添加夜间模式按钮"></a><em>添加夜间模式按钮</em></h4><p>步骤一 安装夜间模式插件 :</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-next-darkmode --save</span><br></pre></td></tr></table></figure>
-<p>步骤二 往 NexT 主题的 _config.yml 配置文件里添加以下内容 :</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Darkmode JS</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">For more information: https://github.com/rqh656418510/hexo-next-darkmode, https://github.com/sandoche/Darkmode.js</span></span><br><span class="line">darkmode_js:</span><br><span class="line">  enable: true</span><br><span class="line">  bottom: &#x27;64px&#x27; # default: &#x27;32px&#x27;</span><br><span class="line">  right: &#x27;unset&#x27; # default: &#x27;32px&#x27;</span><br><span class="line">  left: &#x27;32px&#x27; # default: &#x27;unset&#x27;</span><br><span class="line">  time: &#x27;0.5s&#x27; # default: &#x27;0.3s&#x27;</span><br><span class="line">  mixColor: &#x27;transparent&#x27; # default: &#x27;#fff&#x27;</span><br><span class="line">  backgroundColor: &#x27;transparent&#x27; # default: &#x27;#fff&#x27;</span><br><span class="line">  buttonColorDark: &#x27;#100f2c&#x27; # default: &#x27;#100f2c&#x27;</span><br><span class="line">  buttonColorLight: &#x27;#fff&#x27; # default: &#x27;#fff&#x27;</span><br><span class="line">  isActivated: false # default false</span><br><span class="line">  saveInCookies: true # default: true</span><br><span class="line">  label: &#x27;🌓&#x27; # default: &#x27;&#x27;</span><br><span class="line">  autoMatchOsTheme: true # default: true</span><br><span class="line">  libUrl: # Set custom library cdn url for Darkmode.js</span><br></pre></td></tr></table></figure>
-<ul>
-<li>isActivated: true：默认激活暗黑&#x2F;夜间模式，请始终与 saveInCookies: false、autoMatchOsTheme: false 一起使用；同时需要在 NexT 主题的 _config.yml 配置文件里设置 pjax: true，即启用 Pjax。</li>
+    <div class="post-body" itemprop="articleBody"><h1 id="前提条件"><a href="#前提条件" class="headerlink" title="前提条件"></a>前提条件</h1><ul>
+<li><strong>Waline官方文档</strong></li>
+<li><strong>LeanCloud账号</strong></li>
+<li><strong>Versel服务端</strong></li>
+<li><strong>域名绑定</strong> （非必须）</li>
 </ul>
-<h4 id="自定义css样式"><a href="#自定义css样式" class="headerlink" title="自定义css样式"></a>自定义css样式</h4><p>暗黑&#x2F;夜间模式激活后，插件会将 darkmode–activated CSS 类添加到 body 标签上，你可以利用它覆盖插件默认自带的样式（如下所示），这样就可以实现暗黑&#x2F;夜间模式 CSS 样式的高度自定义。<br>在themes&#x2F;next&#x2F;source&#x2F;css&#x2F;_custom.styl添加以下代码</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">.darkmode--activated &#123;</span><br><span class="line">  --body-bg-color: #282828;</span><br><span class="line">  --content-bg-color: #333;</span><br><span class="line">  --card-bg-color: #555;</span><br><span class="line">  --text-color: #ccc;</span><br><span class="line">  --blockquote-color: #bbb;</span><br><span class="line">  --link-color: #ccc;</span><br><span class="line">  --link-hover-color: #eee;</span><br><span class="line">  --brand-color: #ddd;</span><br><span class="line">  --brand-hover-color: #ddd;</span><br><span class="line">  --table-row-odd-bg-color: #282828;</span><br><span class="line">  --table-row-hover-bg-color: #363636;</span><br><span class="line">  --menu-item-bg-color: #555;</span><br><span class="line">  --btn-default-bg: #222;</span><br><span class="line">  --btn-default-color: #ccc;</span><br><span class="line">  --btn-default-border-color: #555;</span><br><span class="line">  --btn-default-hover-bg: #666;</span><br><span class="line">  --btn-default-hover-color: #ccc;</span><br><span class="line">  --btn-default-hover-border-color: #666;</span><br><span class="line">  --highlight-background: #282b2e;</span><br><span class="line">  --highlight-foreground: #a9b7c6;</span><br><span class="line">  --highlight-gutter-background: #34393d;</span><br><span class="line">  --highlight-gutter-foreground: #9ca9b6;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.darkmode--activated img &#123;</span><br><span class="line">  opacity: 0.75;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.darkmode--activated img:hover &#123;</span><br><span class="line">  opacity: 0.9;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.darkmode--activated code &#123;</span><br><span class="line">  color: #69dbdc;</span><br><span class="line">  background: transparent;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="取消夜间模式"><a href="#取消夜间模式" class="headerlink" title="取消夜间模式"></a>取消夜间模式</h4><ul>
-<li>当某个标签不想使用暗黑&#x2F;夜间模式时，可以添加 darkmode-ignore CSS 类到标签上。</li>
+<h1 id="LeanCloud注册"><a href="#LeanCloud注册" class="headerlink" title="LeanCloud注册"></a>LeanCloud注册</h1><ol>
+<li><a target="_blank" rel="noopener" href="https://console.leancloud.app/login">登录</a> 或 <a target="_blank" rel="noopener" href="https://console.leancloud.app/register">注册</a> LeanCloud 国际版</li>
+<li>点击左上角 <a target="_blank" rel="noopener" href="https://console.leancloud.app/apps">创建应用</a><ul>
+<li>App name（必填）</li>
+<li>选择免费 <strong>Developer</strong> 开发板</li>
 </ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;span class=&quot;darkmode-ignore&quot;&gt;😬&lt;span&gt;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>当然你也可以使用 isolation: isolate; CSS 样式来忽略暗黑&#x2F;夜间模式。</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.button &#123;</span><br><span class="line">  isolation: isolate;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>也可以使用这种 mix-blend-mode: difference CSS 样式来还原暗黑&#x2F;夜间模式。</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.button &#123;</span><br><span class="line">  mix-blend-mode: difference;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h4 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h4><p><img src="/images/pic1.png" alt="sudo字眼没有高光"><br><em>原因</em></p>
-<ol>
-<li>在 Markdown 文件中，如果代码块未指定语言类型，语法高亮引擎可能无法正确解析 sudo。</li>
-<li>主题颜色</li>
+</li>
 </ol>
-<p><em>解决方案</em></p>
-<ul>
-<li>使用语法高亮主题</li>
-</ul>
-<ol>
-<li>打开 NexT 的配置文件：</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">themes/next/_config.yml</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>找到以下设置并修改高亮主题为支持亮色的夜间样式，例如 dracula 或其他亮色主题：</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">highlight:</span><br><span class="line">  enable: true</span><br><span class="line">  theme: monokai</span><br></pre></td></tr></table></figure>
+<p><img src="/images/leancloud_create_app.png" alt="创建应用">  </p>
 <ol start="3">
-<li>确保在代码块的开头指定正确的语言类型，例如 bash 或 shell：</li>
+<li>选择刚创建的应用</li>
 </ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install mariadb-server mariadb-client -y</span><br><span class="line"></span><br><span class="line">or</span><br><span class="line"></span><br><span class="line">sudo apt install mariadb-server mariadb-client -y</span><br></pre></td></tr></table></figure>
-
+<p><img src="/images/select_leancloud_app.png" alt="选择应用">  </p>
 <ol start="4">
-<li>保存后运行以下命令以重新生成：</li>
+<li>点击 <strong>Settings</strong> 然后 <strong>App Keys</strong>，记录 AppID | AppKey | MasterKey，后面会用到</li>
 </ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<p><img src="/images/app_clientid_key.png" alt="选择应用">  </p>
+<h1 id="Vercel服务端部署"><a href="#Vercel服务端部署" class="headerlink" title="Vercel服务端部署"></a>Vercel服务端部署</h1><div style="text-align: center;">
+  <a href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwalinejs%2Fwaline%2Ftree%2Fmain%2Fexample" target="_blank" style="display: inline-block; padding: 2px 21px; background-color: #000000; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">
+    Deploy
+  </a>
+  <div style="margin-top: 0px; font-size: 12px; color: #808080;">
+    Vercel
+  </div>
+</div>
+
+<ol>
+<li><p>点击<strong>上方按钮</strong>，跳转到 Vercel 进行 Server端部署  </p>
+</li>
+<li><p>登录 <strong>GitHub</strong></p>
+</li>
+</ol>
+<p><img src="/images/vercel_connect.jpg" alt="登录GitHub">  </p>
+<ol start="3">
+<li>点击 <strong>Authorize Vercel</strong></li>
+</ol>
+<p><img src="/images/github_authorize_vercel.jpg" alt="搜全Vercel访问GitHub">  </p>
+<ol start="4">
+<li>在 <strong>Git Scope</strong> 选择 <strong>GitHub Account</strong></li>
+</ol>
+<p><img src="/images/add_github_account.jpg" alt="添加GitHub账号">  </p>
+<ol start="5">
+<li><strong>安装 Vercel</strong> 到 <strong>全部</strong> &#x2F; <strong>指定</strong> 的 Repositories</li>
+</ol>
+<p><img src="/images/install_vercel2github.jpg" alt="安装Vercel到GitHub Repo">  </p>
+<ol start="6">
+<li>确保 <strong>Git Scope</strong> 出现你的 <strong>GitHub账户名</strong>，<br>然后在 <strong>Private Repository Name</strong> 创建新的repo<br>点击 <strong>Create</strong></li>
+</ol>
+<p><img src="/images/repos_name.jpg" alt="创建Vercel Repo">  </p>
+<p> 7. </p>
+<p><img src="/images/vercel_deployment.jpg" alt="开始部署Vercel"><br><img src="/images/vercel_successful.jpg" alt="成功部署"><br><img src="/images/vercel_main.jpg" alt="Vercel主页"><br><img src="/images/vercel_settings.jpg" alt="Vercel设置"><br><img src="/images/repos_name.jpg" alt="创建Vercel Repo">  </p>
 
     </div>
 
@@ -314,14 +328,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2024/12/03/Hexo%E9%83%A8%E7%BD%B2/" rel="prev" title="Hexoの部署">
-                  <i class="fa fa-angle-left"></i> Hexoの部署
+                <a href="/2024/12/05/%E5%B7%A5%E4%BD%9C%E6%96%87%E5%8C%96%E5%B7%AE%E5%BC%82/" rel="prev" title="工作文化差异">
+                  <i class="fa fa-angle-left"></i> 工作文化差异
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2024/12/04/Python/" rel="next" title="Python Basic">
-                  Python Basic <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -393,7 +404,7 @@
 
 
 
-<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"waline-comment-ten-neon.vercel.app","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"placeholder":"请文明评论呀","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"visitor":false,"comment_count":true,"requiredFields":[],"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","el":"#waline","comment":true,"path":"/2024/12/03/hexo%E3%81%AE%E5%A4%9C%E9%97%B4%E6%A8%A1%E5%BC%8F/"}</script>
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"waline-comment-ten-neon.vercel.app","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"placeholder":"请文明评论呀","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"visitor":false,"comment_count":true,"requiredFields":[],"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","el":"#waline","comment":true,"path":"/2024/12/11/Hexo%E3%81%AE%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E9%83%A8%E7%BD%B2/"}</script>
 <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
 <script>
 document.addEventListener('page:loaded', () => {
