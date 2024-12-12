@@ -3,6 +3,7 @@ title: Python Basic
 date: 2024-12-04 10:16:49
 categories:
 - Skill
+- Python
 tags:
 ---
 
