@@ -40,7 +40,7 @@
 <meta property="og:image" content="http://example.com/images/donessh.png">
 <meta property="og:image" content="http://example.com/images/sshrecord.png">
 <meta property="article:published_time" content="2024-12-03T03:05:44.000Z">
-<meta property="article:modified_time" content="2024-12-11T06:26:24.038Z">
+<meta property="article:modified_time" content="2024-12-17T02:25:33.197Z">
 <meta property="article:author" content="枫叶の归宿">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/images/nodejs.jpg">
@@ -124,7 +124,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E4%BA%8B%E5%89%8D%E5%87%86%E5%A4%87"><span class="nav-text">1. 事前准备</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E8%BD%AF%E4%BB%B6%E6%94%AF%E6%8C%81"><span class="nav-text">2. 软件支持</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-%E9%85%8D%E7%BD%AE-Git-%E5%AF%86%E9%92%A5%E5%B9%B6%E8%BF%9E%E6%8E%A5%E8%87%B3-Github"><span class="nav-text">3. 配置 Git 密钥并连接至 Github</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E4%BA%8B%E5%89%8D%E5%87%86%E5%A4%87"><span class="nav-text">1. 事前准备</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E8%BD%AF%E4%BB%B6%E6%94%AF%E6%8C%81"><span class="nav-text">2. 软件支持</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-%E9%85%8D%E7%BD%AE-Git-%E5%AF%86%E9%92%A5%E5%B9%B6%E8%BF%9E%E6%8E%A5%E8%87%B3-Github"><span class="nav-text">3. 配置 Git 密钥并连接至 Github</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-%E5%88%9D%E5%A7%8B%E5%8C%96-Hexo-%E5%8D%9A%E5%AE%A2"><span class="nav-text">4. 初始化 Hexo 博客</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-%E5%B0%86%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%8C%82%E8%BD%BD%E5%88%B0-GitHub-Pages"><span class="nav-text">5.将静态博客挂载到 GitHub Pages</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-%E5%B0%86%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%8C%82%E8%BD%BD%E5%88%B0-Cloudflare-Pages"><span class="nav-text">6.将静态博客挂载到 Cloudflare Pages</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -222,7 +222,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-12-11 14:26:24" itemprop="dateModified" datetime="2024-12-11T14:26:24+08:00">2024-12-11</time>
+      <time title="Modified: 2024-12-17 10:25:33" itemprop="dateModified" datetime="2024-12-17T10:25:33+08:00">2024-12-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -320,19 +320,114 @@
 <br>
 
 <ol start="3">
-<li><p>测试链接，输入以下命令</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+<li>测试链接，输入以下命令<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
 
-<p> 第一次连接会提示 <code>Are you sure you want to continue connecting (yes/no/[fingerprint])?</code> ，输入 <strong>yes</strong> 即可<br> {暂无图片可展示，以后补上}</p>
-<p> 出现连接到账户的信息，说明已经大功告成，至此完成了环境准备工作。<br> {暂无图片可展示，以后补上}</p>
-</li>
+ 第一次连接会提示 <code>Are you sure you want to continue connecting (yes/no/[fingerprint])?</code> ，输入 <strong>yes</strong> 即可<br> [暂无图片可展示，以后补上]<br><br> 出现连接到账户的信息，说明已经大功告成，至此完成了环境准备工作。<br> [暂无图片可展示，以后补上]</li>
 </ol>
 <p><strong>3.4 创建GitHub.io仓库</strong></p>
 <ul>
-<li>点击右上角的 <code>+</code> 按钮，选择<strong>New repository</strong>，创建一个 <code>&lt;用户名&gt;.github.io</code> 的仓库。</li>
-<li>仓库名字的格式必须为： <code>&lt;用户名&gt;.github.io</code> (注意：前缀必须为用户名，此为预览博客需要，后期可修改仓库名)</li>
-<li>可见性必须选择 <code>Public</code> 方便第一次部署检查问题，点击 <strong>Creat repository</strong> 进行创建即可</li>
+<li><p>点击右上角的 <code>+</code> 按钮，选择<strong>New repository</strong>，创建一个 <code>&lt;用户名&gt;.github.io</code> 的仓库。</p>
+</li>
+<li><p>仓库名字的格式必须为： <code>&lt;用户名&gt;.github.io</code> (注意：前缀必须为用户名，此为预览博客需要，后期可修改仓库名)</p>
+</li>
+<li><p>可见性必须选择 <code>Public</code> 方便第一次部署检查问题，点击 <strong>Creat repository</strong> 进行创建即可  </p>
+<pre><code>  [图片上传]
+</code></pre>
+</li>
 </ul>
+<h1 id="4-初始化-Hexo-博客"><a href="#4-初始化-Hexo-博客" class="headerlink" title="4. 初始化 Hexo 博客"></a>4. 初始化 Hexo 博客</h1><ul>
+<li><p>创建一个文件夹来保存博客源码（我这里选的路径为<code>D:/Hexo-Blog</code>），在文件夹内右键鼠标，选择<code>Open Git Bash here</code>  </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli &amp;&amp; hexo -v</span><br></pre></td></tr></table></figure>
+
+<pre><code>  [图片上传]  
+</code></pre>
+</li>
+<li><p>在<code>Git BASH</code>输入如下命令安装 Hexo  </p>
+<pre><code>  [图片上传]  
+</code></pre>
+</li>
+<li><p>安装完后输入<code>hexo -v</code>验证是否安装成功。</p>
+<pre><code>  [图片上传]  
+</code></pre>
+</li>
+<li><p>初始化 Hexo 项目安装相关依赖。  </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog-demo</span><br><span class="line">cd blog-demo</span><br><span class="line">npm i</span><br></pre></td></tr></table></figure>
+
+<pre><code>  [图片上传]  
+</code></pre>
+</li>
+<li><p>初始化项目后，<code>blog-demo</code>有如下结构：  </p>
+<pre><code>  [图片上传]&lt;br&gt;
+</code></pre>
+</li>
+<li><p>node_modules：依赖包</p>
+</li>
+<li><p>scaffolds：生成文章的一些模板</p>
+</li>
+<li><p>source：用来存放你的文章</p>
+</li>
+<li><p>themes：主题</p>
+</li>
+<li><p>.npmignore：发布时忽略的文件（可忽略）</p>
+</li>
+<li><p>_config.landscape.yml：主题的配置文件</p>
+</li>
+<li><p>config.yml：博客的配置文件</p>
+</li>
+<li><p>package.json：项目名称、描述、版本、运行和开发等信</p>
+</li>
+<li><p>输入<code>hexo cl &amp;&amp; hexo s</code>启动项目</p>
+<pre><code>  [图片上传]&lt;br&gt;
+</code></pre>
+</li>
+<li><p>打开浏览器，输入地址：<a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a> ，看到下面的效果，说明你的博客已经构建成功了。  </p>
+<pre><code>  [图片上传]&lt;br&gt;
+</code></pre>
+</li>
+</ul>
+<h1 id="5-将静态博客挂载到-GitHub-Pages"><a href="#5-将静态博客挂载到-GitHub-Pages" class="headerlink" title="5.将静态博客挂载到 GitHub Pages"></a>5.将静态博客挂载到 GitHub Pages</h1><p>5.1 安装 hexo-deployer-git</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<p>5.2 修改 <code>_config.yml</code> 文件<br>在blog-demo目录下的_config.yml，就是整个Hexo框架的配置文件了。可以在里面修改大部分的配置。详细可参考官方的配置描述。<br>修改最后一行的配置，将repository修改为你自己的github项目地址即可，还有分支要改为<code>main</code>代表主分支（注意缩进）。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:cmliussss2024/cmliussss2024.github.io.git</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure>
+
+<p>5.3 修改好配置后，运行如下命令，将代码部署到 GitHub（Hexo三连）。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// Git BASH终端</span><br><span class="line">hexo clean &amp;&amp; hexo generate &amp;&amp; hexo deploy  </span><br><span class="line"></span><br><span class="line">// 或者</span><br><span class="line"></span><br><span class="line">// VSCODE终端</span><br><span class="line">hexo cl; hexo g; hexo d</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>hexo clean：删除之前生成的文件，可以用<code>hexo cl</code>缩写。</p>
+</li>
+<li><p>hexo generate：生成静态文章，可以用<code>hexo g</code>缩写</p>
+</li>
+<li><p>hexo deploy：部署文章，可以用<code>hexo d</code>缩写</p>
+<pre><code>  [图片上传]&lt;br&gt;
+</code></pre>
+</li>
+</ul>
+<p>如果出现Deploy done，则说明部署成功了。</p>
+<pre><code>    [图片上传]&lt;br&gt;
+</code></pre>
+<p>稍等两分钟，打开浏览器访问：<a target="_blank" rel="noopener" href="https://mapleblog.github.io/">https://mapleblog.github.io</a> ，这时候我们就可以看到博客内容了。</p>
+<pre><code>    [图片上传]&lt;br&gt;
+</code></pre>
+<h1 id="6-将静态博客挂载到-Cloudflare-Pages"><a href="#6-将静态博客挂载到-Cloudflare-Pages" class="headerlink" title="6.将静态博客挂载到 Cloudflare Pages"></a>6.将静态博客挂载到 Cloudflare Pages</h1><p>6.1 在 <code>Workers 和 Pages</code> 中选择 <code>Pages</code> 的 <code>连接到 Git</code></p>
+<pre><code>    [图片上传]
+    [图片上传]&lt;br&gt;
+</code></pre>
+<p>6.2 然后登录你Blog仓库对应的GitHub帐号</p>
+<pre><code>    [图片上传]
+    [图片上传]&lt;br&gt;
+</code></pre>
+<p>6.3 点击<code>保存并部署</code>后等待部署完成即可。</p>
+<pre><code>    [图片上传]&lt;br&gt;
+</code></pre>
+<p>6.4 提示<code>成功！您的项目已部署到以下区域：全球</code>后，浏览器访问：<a target="_blank" rel="noopener" href="https://cmliussss2024-github-io.pages.dev/">https://cmliussss2024-github-io.pages.dev</a> ，这时候我们就可以看到博客内容了。  </p>
+<pre><code>    [图片上传]&lt;br&gt;
+</code></pre>
+<p><em>这时你也就可以将你的&lt;用户名&gt;.github.io的仓库设置为Private私库了</em><br></p>
+<p>6.5 如果你有自己的域名，你可以在这里绑定你自己的自定义域，即可  </p>
+<pre><code>    [图片上传]&lt;br&gt;
+</code></pre>
 
     </div>
 
